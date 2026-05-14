@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillQuest Binary Tree Explorer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">BT</div>
+        <div>
+          <h1>SkillQuest</h1>
+          <p>Binary Tree Learning Map</p>
+        </div>
+      </div>
+      <section class="panel">
+        <h2>Add Quest Node</h2>
+        <label>Score / Key</label>
+        <input id="keyInput" type="number" value="50" min="1" max="99" />
+        <label>Quest Title</label>
+        <input id="titleInput" type="text" value="Master Java Basics" />
+        <button id="insertBtn">Insert into Binary Tree</button>
+      </section>
+      <section class="panel">
+        <h2>Tree Actions</h2>
+        <div class="button-grid">
+          <button data-traverse="inorder">Inorder</button>
+          <button data-traverse="preorder">Preorder</button>
+          <button data-traverse="postorder">Postorder</button>
+          <button id="resetBtn">Reset</button>
+        </div>
+        <label>Search Key</label>
+        <div class="search-row">
+          <input id="searchInput" type="number" value="65" />
+          <button id="searchBtn">Find</button>
+        </div>
+      </section>
+      <section class="panel">
+        <h2>Real-Life Activities</h2>
+        <div class="activity-grid">
+          <button data-activity="cards">Playing Cards</button>
+          <button data-activity="people">Sort People</button>
+          <button data-activity="tasks">Task Priority</button>
+          <button data-activity="prices">Item Prices</button>
+        </div>
+      </section>
+      <section class="legend">
+        <button class="structure-btn active" data-structure="all"><i class="all-dot"></i> All</button>
+        <button class="structure-btn" data-structure="root"><i class="root-dot"></i> Root</button>
+        <button class="structure-btn" data-structure="parent"><i class="parent-dot"></i> Parent</button>
+        <button class="structure-btn" data-structure="child"><i class="child-dot"></i> Child</button>
+      </section>
+    </aside>
+
+    <section class="content">
+      <header class="hero-card">
+        <div>
+          <p class="eyebrow">Creative Binary Tree Application</p>
+          <h2>Build a personalized study quest map where every node is organized by score.</h2>
+          <p>Lower keys go to the left child and higher keys go to the right child, making the binary tree visible and interactive.</p>
+        </div>
+        <div class="stats">
+          <div><strong id="nodeCount">0</strong><span>Nodes</span></div>
+          <div><strong id="heightCount">0</strong><span>Height</span></div>
+          <div><strong id="lastAction">Ready</strong><span>Status</span></div>
+        </div>
+      </header>
+
+      <section class="tree-card">
+        <div class="card-title">
+          <div>
+            <h2>Binary Tree Visualization</h2>
+            <p id="activityDescription">Click an activity to see how binary trees organize real-life data.</p>
+          </div>
+          <p>Small values branch left. Large values branch right.</p>
+        </div>
+        <div id="treeCanvas" class="tree-canvas"></div>
+      </section>
+
+      <section class="output-card">
+        <h2>Traversal / Search Output</h2>
+        <div id="output" class="output">Insert or traverse nodes to see output here.</div>
+      </section>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
